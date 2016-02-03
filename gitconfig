@@ -1,0 +1,9 @@
+[user]
+	name = alidaka
+	email = alidaka@users.noreply.github.com
+[credential]
+	helper = cache
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false

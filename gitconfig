@@ -1,9 +1,17 @@
 [user]
-	name = alidaka
-	email = alidaka@users.noreply.github.com
-[credential]
-	helper = cache
+  name = alidaka
+  email = alidaka@gmail.com
+
 [diff]
-	tool = vimdiff
+  tool = vimdiff
+
 [difftool]
-	prompt = false
+  prompt = false
+
+[interactive]
+  singleKey = true
+
+[alias]
+  st = status
+  co = checkout
+  br = branch

@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-PATH=$PATH:~/scripts:~/android-studio/bin
+PATH=$PATH:~/scripts:~/android-studio/bin:~/bin/intellij/bin
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return

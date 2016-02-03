@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/bash -e
 
-source_dir=`dirname $0`
+source_dir=$( cd $(dirname $0) ; pwd -P )
 backup=~/dotfiles_backup
 files="bashrc vimrc gitconfig tmux.conf profile bash_profile"
 
@@ -18,13 +18,13 @@ for file in $files; do
   dest=~/.$file
   echo "$file --> $dest"
 
-  if [ -f $dest ]; then
-    echo "| Backing up $dest to $backup..."
+  if [ -f $dest ] || [ -h $dest ]; then
+    echo "  Backing up $dest to $backup..."
     mkdir -p $backup
     mv $dest $backup
   fi
 
-  echo "| Creating link for $file..."
+  echo "  Creating link for $file..."
   ln -s $source_dir/$file $dest
   echo
 done

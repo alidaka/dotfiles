@@ -58,4 +58,7 @@ function StripTrailingWhitespace()
     endif
 endfunction
 
+" TODO: plugins to check out...
+" vim-tmux-navigator
+
 execute pathogen#infect()

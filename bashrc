@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-PATH=$PATH:~/scripts:~/android-studio/bin:~/bin/intellij/bin
+PATH=$PATH:~/scripts:~/android-studio/bin:~/bin/intellij/bin:~/code/direnv
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
@@ -102,3 +102,8 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+eval "$(direnv hook bash)"
+
+# added by travis gem
+[ -f /home/augustus/.travis/travis.sh ] && source /home/augustus/.travis/travis.sh

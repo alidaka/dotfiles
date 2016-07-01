@@ -15,3 +15,7 @@
   st = status
   co = checkout
   br = branch
+  lg = log --oneline --graph
+
+[push]
+  default = simple

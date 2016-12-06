@@ -29,4 +29,9 @@ for file in $files; do
   echo
 done
 
+echo " Creating vim directories..."
+mkdir -p ~/tmp
+mkdir -p ~/.vimswap
+echo
+
 echo "All done!"

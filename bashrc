@@ -98,6 +98,9 @@ alias ..='cd ..'
 alias trash='mv -t ~/trash'
 alias term=$COLORTERM
 
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 ### Added by the Heroku Toolbelt

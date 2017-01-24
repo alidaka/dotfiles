@@ -110,3 +110,5 @@ eval "$(direnv hook bash)"
 
 # added by travis gem
 [ -f /home/augustus/.travis/travis.sh ] && source /home/augustus/.travis/travis.sh
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

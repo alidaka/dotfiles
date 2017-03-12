@@ -30,7 +30,7 @@ nnoremap k gk
 autocmd FileType * setlocal formatoptions-=r formatoptions-=o
 
 "backup dir
-set backupdir=~/tmp
+set backupdir=~/temp
 set dir=~/.vimswap//
 
 "COLORSCHEMES

@@ -30,7 +30,7 @@ for file in $files; do
 done
 
 echo " Creating vim directories..."
-mkdir -p ~/tmp
+mkdir -p ~/temp
 mkdir -p ~/.vimswap
 echo
 

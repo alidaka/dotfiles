@@ -4,6 +4,7 @@ set -e
 SOURCE=${1%/}
 if [[ -z $SOURCE ]]; then
   /bin/echo "Usage: ${0} <source_directory> [output_file]"
+  exit 1
 fi
 
 DEST=${2}

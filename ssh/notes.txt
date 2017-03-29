@@ -1,0 +1,11 @@
+for temp filenames in $dir
+mktemp -p $dir
+
+Darwin
+hdiutil takes sectors
+hdiutil attach -nomount ram://$((2 * 1024 * SIZE_IN_MB))
+diskutil eraseVolume HFS+ ramdisk ^^^output of that ^^^
+
+shellcheck
+https://github.com/koalaman/shellcheck
+-eux?

@@ -3,10 +3,14 @@ set -e
 
 SOURCE=${1%/}
 if [[ -z $SOURCE ]]; then
-  /bin/echo "Usage: ${0} <source_directory>"
+  /bin/echo "Usage: ${0} <source_directory> [output_file]"
 fi
 
-DEST_GPG=$SOURCE.gpg
-GPG_TTY=$(tty) /usr/bin/tar c $SOURCE | /usr/local/bin/gpg --symmetric --cipher-algo AES256 --output $SOURCE.gpg
+DEST=${2%/}
+if [[ -z $DEST ]]; then
+  DEST=$SOURCE.gpg
+fi
 
-/bin/echo $DEST_GPG
+GPG_TTY=$(tty) /usr/bin/tar c $SOURCE | /usr/local/bin/gpg --symmetric --cipher-algo AES256 --output $DEST
+
+/bin/echo $DEST

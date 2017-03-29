@@ -6,7 +6,7 @@ if [[ -z $SOURCE ]]; then
   /bin/echo "Usage: ${0} <source_directory> [output_file]"
 fi
 
-DEST=${2%/}
+DEST=${2}
 if [[ -z $DEST ]]; then
   DEST=$SOURCE.gpg
 fi

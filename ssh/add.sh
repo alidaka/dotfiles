@@ -1,13 +1,30 @@
-#!/bin/sh -e
+#!/bin/sh
+set -e
 
-echo "WIP!!"
-exit 1
+MINUTES=$1
+if [[ -z $MINUTES ]]; then
+  MINUTES=1
+fi
 
-HOURS=$1
+# Mount and decrypt
+if [[ "$OS" -eq "Darwin" ]]; then
+  # size in 512b sectors
+  RAMDISK=$(/usr/bin/hdiutil attach -nomount ram://$((2 * 1024 * 5)))
+  /usr/sbin/diskutil eraseVolume HFS+ ramdisk $RAMDISK
+else
+  echo "linux...WIP"
+  exit 1
+fi
 
-/usr/bin/ssh-add -T
+# Add key
+/usr/bin/ssh-add -D
+/usr/bin/ssh-add -t ${MINUTES}M
 
-# if Darwin
-brew tap homebrew/fuse
-brew install Caskroom/cask/osxfuse
-brew install ext4fuse
+# Unmount
+if [[ "$OS" -eq "Darwin" ]]; then
+  # umount -f ...
+  # hdiutil detach ...
+else
+  echo "linux...WIP"
+  exit 1
+fi

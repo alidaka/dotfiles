@@ -3,6 +3,7 @@ mktemp -p $dir
 
 Darwin
 bigger than 5mb ramdisk?
+tar -C parameter position?
 hdiutil takes sectors
 hdiutil attach -nomount ram://$((2 * 1024 * SIZE_IN_MB))
 diskutil eraseVolume HFS+ ramdisk ^^^output of that ^^^

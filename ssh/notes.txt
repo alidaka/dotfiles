@@ -1,5 +1,4 @@
-for temp filenames in $dir
-mktemp -p $dir
+!! sh /var/media/.../add.sh must somehow export $SSH_AGENT_PID! !!
 
 Darwin
 bigger than 5mb ramdisk?
@@ -11,3 +10,5 @@ diskutil eraseVolume HFS+ ramdisk ^^^output of that ^^^
 shellcheck
 https://github.com/koalaman/shellcheck
 -eux?
+
+split Linux and Darwin add.sh paths into separate scripts?

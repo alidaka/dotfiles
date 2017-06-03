@@ -12,6 +12,6 @@ if [ -z "$DEST" ]; then
   DEST=$SOURCE.gpg
 fi
 
-GPG_TTY=$(tty) tar c "$SOURCE" | gpg --symmetric --cipher-algo AES256 --output "$DEST"
+GPG_TTY=$(tty) tar c --directory="$SOURCE" . | gpg --symmetric --cipher-algo AES256 --output "$DEST"
 
 echo "$DEST"

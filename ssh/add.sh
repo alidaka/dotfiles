@@ -26,7 +26,7 @@ else
   fi
 
   TEMP_DIR=$(mktemp --directory --tmpdir=/dev/shm)
-  "$SCRIPT_DIR/scripts/unlock.sh" "$SCRIPT_DIR/.ssh.gpg" "$TEMP_DIR"
+  sh "$SCRIPT_DIR/scripts/unlock.sh" "$SCRIPT_DIR/.ssh.gpg" "$TEMP_DIR"
 
   if [ -z "$SSH_AGENT_PID" ]; then
     eval $(ssh-agent -s)

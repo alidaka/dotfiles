@@ -7,9 +7,9 @@ if [ -z "$SOURCE" ]; then
   exit 1
 fi
 
-DEST=${2}
+DEST=$2
 if [ -z "$DEST" ]; then
-  DEST=${PWD}
+  DEST=$PWD
 fi
 
 gpg --decrypt "$SOURCE" | tar xf - -C "$DEST"

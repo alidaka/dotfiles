@@ -2,14 +2,17 @@
 set -e
 
 SOURCE=$1
-if [ -z "$SOURCE" ]; then
-  echo "Usage: ${0} <source_file.tar.gpg> [destination_directory]"
+SECONDS=$2
+if [ -z "$SOURCE" ] || [ -z "$SECONDS" ]; then
+  echo "Usage: ${0} <source_file.tar.gpg> <seconds> [destination_directory]"
   exit 1
 fi
 
-DEST=${2}
+DEST=${3}
 if [ -z "$DEST" ]; then
-  DEST=${PWD}
+  DEST=`mktemp --directory -p /dev/shm`
 fi
 
 gpg --decrypt "$SOURCE" | tar xf - -C "$DEST"
+
+sleep $SECONDS && rm -rf $DEST &

@@ -9,3 +9,8 @@ https://github.com/koalaman/shellcheck
 -eux?
 
 split Linux and Darwin add.sh paths into separate scripts?
+
+check if being sourced (and if so, start ssh-agent?)
+[[ $0 != "$BASH_SOURCE" ]] && sourced=1 || sourced=0
+bash-only
+possibly ${BASH_SOURCE[0]} is better syntax, although equivalent?

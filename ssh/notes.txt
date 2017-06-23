@@ -14,3 +14,6 @@ check if being sourced (and if so, start ssh-agent?)
 [[ $0 != "$BASH_SOURCE" ]] && sourced=1 || sourced=0
 bash-only
 possibly ${BASH_SOURCE[0]} is better syntax, although equivalent?
+
+cp flags don't work on Darwin :(
+need to support source flag in setup.sh

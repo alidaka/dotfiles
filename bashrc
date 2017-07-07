@@ -93,7 +93,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-alias .='nautilus .'
 alias ..='cd ..'
 alias trash='mv -t ~/trash'
 alias term=$COLORTERM

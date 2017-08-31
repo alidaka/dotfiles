@@ -25,7 +25,7 @@ if [ "$OS" = "Darwin" ]; then
   diskutil eraseVolume HFS+ ramdisk "$RAMDISK"
 
   TEMP_DIR=/Volumes/ramdisk
-  sh "$SCRIPT_DIR/scripts/unlock.sh" "$SCRIPT_DIR/.ssh.gpg" "$TEMP_DIR"
+  sh "$SCRIPT_DIR/.scripts/unlock.sh" "$SCRIPT_DIR/.ssh.gpg" "$TEMP_DIR"
   ssh-add -D
   ssh-add -t ${MINUTES}M "$TEMP_DIR/id_rsa"
 
@@ -38,7 +38,7 @@ else
   fi
 
   TEMP_DIR=$(mktemp --directory --tmpdir=/dev/shm)
-  sh "$SCRIPT_DIR/scripts/unlock.sh" "$SCRIPT_DIR/.ssh.gpg" "$TEMP_DIR"
+  sh "$SCRIPT_DIR/.scripts/unlock.sh" "$SCRIPT_DIR/.ssh.gpg" "$TEMP_DIR"
   ssh-add -D
   ssh-add -t ${MINUTES}M "$TEMP_DIR/id_rsa"
 

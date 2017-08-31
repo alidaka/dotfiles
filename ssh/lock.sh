@@ -7,13 +7,16 @@ if [ -z "$SOURCE" ]; then
   exit 1
 fi
 
+PARENT=$(dirname $SOURCE)
+BASE=$(basename $SOURCE)
+
 DEST=${2}
 if [ -z "$DEST" ]; then
-  DEST=$SOURCE.gpg
+  DEST=$BASE.gpg
 fi
 
 GPG_TTY=$(tty)
 export GPG_TTY
-tar c --directory="$SOURCE" . | gpg --symmetric --cipher-algo AES256 --output "$DEST"
+tar c --directory="$PARENT" "$BASE" | gpg --symmetric --cipher-algo AES256 --output "$DEST"
 
 echo "$DEST"

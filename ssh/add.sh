@@ -40,7 +40,7 @@ else
   TEMP_DIR=$(mktemp --directory --tmpdir=/dev/shm)
   sh "$SCRIPT_DIR/.scripts/unlock.sh" "$SCRIPT_DIR/.ssh.gpg" "$TEMP_DIR"
   ssh-add -D
-  ssh-add -t ${MINUTES}M "$TEMP_DIR/id_rsa"
+  ssh-add -t ${MINUTES}M "$TEMP_DIR/.ssh/id_rsa"
 
   rm --recursive --force "$TEMP_DIR"
 fi

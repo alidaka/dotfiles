@@ -1,8 +1,9 @@
 # Not really automated
-vim plugins
-solarized
+vim plugins (Vundle vs Pathogen?)
+  solarized?
+terminal solarized?
 
-# crouton?
+# crouton
 Solarized:
   https://github.com/altercation/solarized
   https://github.com/Anthony25/gnome-terminal-colors-solarized

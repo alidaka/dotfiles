@@ -1,0 +1,11 @@
+~/.oh-my-zsh/themes
+  all builtin themes
+~/.oh-my-zsh/lib
+  builtin functions
+
+~/.oh-my-zsh/custom/*.zsh_theme
+  custom themes, get priority over builtin
+
+Resources
+http://www.manpagez.com/man/1/zshmisc/
+http://zsh.sourceforge.net/Guide/zshguide03.html

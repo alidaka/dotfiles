@@ -1,7 +1,7 @@
 local ret_status="%(?:%{$fg_bold[cyan]%}> :%{$fg_bold[red]%}> )"
 local sep="%{$fg_bold[yellow]%}|"
 PROMPT='
-%{$fg_bold[blue]%}%* $sep %{$fg_bold[cyan]%}%~ $(git_prompt_info)
+%{$fg_bold[blue]%}%D{%H:%M:%S} $sep %{$fg_bold[cyan]%}%~ $(git_prompt_info)
 ${ret_status}%{$reset_color%}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="$sep %{$fg_bold[blue]%}git:(%{$fg[red]%}"

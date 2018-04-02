@@ -102,7 +102,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # added by travis gem
 [ -f /home/augustus/.travis/travis.sh ] && source /home/augustus/.travis/travis.sh
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 alias ..='cd ..'
 alias trash='mv -t ~/trash'

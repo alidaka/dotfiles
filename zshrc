@@ -110,4 +110,6 @@ alias trash='mv -t ~/trash'
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
+alias tmux='TERM=xterm-256color tmux'
+
 eval "$(direnv hook zsh)"

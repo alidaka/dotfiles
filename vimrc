@@ -47,6 +47,9 @@ map <C-n> :NERDTreeToggle<CR>
 "add some custom HTML indentation tags
 let g:html_indent_inctags="html,body,head,tbody,meta"
 
+" ctrlp ignored directories
+let g:ctrlp_custom_ignore='node_modules\|elm-stuff\|.git'
+
 "Custom functions
 function StripTrailingWhitespace()
     if !&binary && &filetype != 'diff'

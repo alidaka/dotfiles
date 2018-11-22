@@ -42,27 +42,13 @@ colo onedark
 filetype plugin on
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
-map <C-n> :NERDTreeToggle<CR>
-
-"add some custom HTML indentation tags
-let g:html_indent_inctags="html,body,head,tbody,meta"
-
 " ctrlp ignored directories
 let g:ctrlp_custom_ignore='node_modules\|elm-stuff\|.git'
+let g:ctrlp_use_caching = 0
 
-"Custom functions
-function StripTrailingWhitespace()
-    if !&binary && &filetype != 'diff'
-        normal mz
-        normal Hmy
-        %s/\s\+$//e
-        normal 'yz<CR>
-        normal `z
-    endif
-endfunction
-
-" TODO: plugins to check out...
-" vim-tmux-navigator
+if executable('rg')
+  set grepprg=rg\ --vimgrep
+endif
 
 execute pathogen#infect()
 

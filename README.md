@@ -20,6 +20,8 @@ shellcheck
 rvm
 ruby
 ripgrep
+nodejs
+yarn
 
 # manually installed vim stuff
 pathogen

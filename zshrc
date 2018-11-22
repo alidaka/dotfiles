@@ -107,6 +107,18 @@ export PATH="/usr/local/heroku/bin:$PATH"
 alias ..='cd ..'
 alias trash='mv -t ~/trash'
 
+unalias gc
+function gc() {
+  local command="git clone git@github.com:alidaka/${1}"
+  if [[ "${1}" =~ '@' ]]
+  then
+    command="git clone ${1}"
+  fi
+
+  echo "${command}"
+  eval "${command}"
+}
+
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 

@@ -22,6 +22,12 @@ set list listchars=tab:»·,trail:·
 filetype on
 filetype indent on
 
+call plug#begin('~/.vim/plugged')
+Plug 'elmcast/elm-vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'joshdick/onedark.vim'
+call plug#end()
+
 "navigation stuff
 nnoremap j gj
 nnoremap k gk
@@ -49,9 +55,3 @@ let g:ctrlp_use_caching = 0
 if executable('rg')
   set grepprg=rg\ --vimgrep
 endif
-
-execute pathogen#infect()
-
-call plug#begin('~/.vim/plugged')
-Plug 'elmcast/elm-vim'
-call plug#end()

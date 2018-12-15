@@ -1,19 +1,19 @@
 #!/bin/bash -e
 
 echo "Install packages..."
-PACKAGES="curl vim zsh gpg"
+PACKAGES="curl vim zsh gnupg direnv"
 if [ $(uname -s) = "Darwin" ]; then
   brew install $PACKAGES
 else
-  apt install $PACKAGES
+  apt -y install $PACKAGES
 fi
 echo "Done!"
 
-#echo "Install vim-plug..."
-#curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    #https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-#vim +PlugInstall +qall
-#echo "Done!"
+echo "Install vim-plug..."
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+vim -u NONE +PlugInstall +qall
+echo "Done!"
 
 echo "Install oh-my-zsh..."
 if command -v zsh 2>/dev/null; then

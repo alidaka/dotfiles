@@ -5,6 +5,7 @@ PACKAGES="curl vim zsh gnupg direnv"
 if [ $(uname -s) = "Darwin" ]; then
   brew install $PACKAGES
 else
+  apt update
   apt -y install $PACKAGES
 fi
 echo "Done!"

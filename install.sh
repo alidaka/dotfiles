@@ -17,7 +17,7 @@ vim -u NONE +PlugInstall +qall
 echo "Done!"
 
 echo "Install oh-my-zsh..."
-if command -v uninstall_oh_my_zsh 2>/dev/null; then
+if [ -d ~/.oh-my-zsh ]; then
   echo "Already installed; skipped!"
 else
   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

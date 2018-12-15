@@ -40,7 +40,7 @@ set backupdir=~/temp
 set dir=~/.vimswap//
 
 "COLORSCHEMES
-colo onedark
+silent! colo onedark
 "colo herald         "low contrast
 "colo ir_black      "high contrast
 

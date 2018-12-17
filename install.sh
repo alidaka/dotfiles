@@ -20,8 +20,8 @@ echo "Install oh-my-zsh..."
 if [ -d ~/.oh-my-zsh ]; then
   echo "Already installed; skipped!"
 else
-  sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-  mv ~/.zshrc.pre-oh-my-zsh ~/.zshrc
+  git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+  chsh -s $(which zsh)
   echo "Done!"
 fi
 

@@ -13,7 +13,7 @@ echo "Done!"
 echo "Install vim-plug..."
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-vim -u NONE +PlugInstall +qall
+vim +PlugInstall +qall
 echo "Done!"
 
 echo "Install oh-my-zsh..."

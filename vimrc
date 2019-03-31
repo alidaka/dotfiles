@@ -26,6 +26,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'elmcast/elm-vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'joshdick/onedark.vim'
+Plug 'rust-lang/rust.vim'
 call plug#end()
 
 "navigation stuff
@@ -55,3 +56,6 @@ let g:ctrlp_use_caching = 0
 if executable('rg')
   set grepprg=rg\ --vimgrep
 endif
+
+" prevent overriding by some 'hercules' filetype
+autocmd BufRead,BufNewFile *.rs set filetype=rust

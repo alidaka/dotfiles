@@ -28,3 +28,5 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 if [ "$TERM" = "xterm" ]; then
   export TERM=xterm-256color
 fi
+
+export PATH="$HOME/.npm-global/bin:$HOME/.cargo/bin:$PATH"

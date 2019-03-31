@@ -96,6 +96,7 @@ unsetopt auto_pushd
 
 PATH=$PATH:~/scripts:~/android-studio/bin:~/bin/intellij/bin:~/code/direnv
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$HOME/.npm-global/bin:$HOME/.cargo/bin:$PATH"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"

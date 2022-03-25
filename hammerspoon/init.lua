@@ -19,11 +19,9 @@ units = {
   br     = { x = 0.5, y = 0.5, w = 0.5, h = 0.5 },
 }
 
-animationDuration = 0
-
 function moveWindow(rect)
   return function ()
-    hs.window.focusedWindow():move(rect, nil, true, animationDuration)
+    hs.window.focusedWindow():move(rect, nil, true, 0)
   end
 end
 
@@ -31,12 +29,15 @@ hs.hotkey.bind(mash, 'left', moveWindow(units.left))
 hs.hotkey.bind(mash, 'right', moveWindow(units.right))
 hs.hotkey.bind(mash, 'up', moveWindow(units.top))
 hs.hotkey.bind(mash, 'down', moveWindow(units.bottom))
+
 hs.hotkey.bind(smash, 'left', moveWindow(units.tl))
 hs.hotkey.bind(smash, 'right', moveWindow(units.br))
 hs.hotkey.bind(smash, 'down', moveWindow(units.tr))
 hs.hotkey.bind(smash, 'up', moveWindow(units.bl))
+
 hs.hotkey.bind(mash, 'm', function()
-  hs.window.focusedWindow():maximize(animationDuration)
+  window = hs.window.focusedWindow()
+  window:maximize(0)
 end)
 hs.hotkey.bind(mash, 'n', function()
   window = hs.window.focusedWindow()
@@ -72,8 +73,8 @@ function mouseHighlight()
     mouseCircle:setStrokeWidth(5)
     mouseCircle:show()
 
-    -- Set a timer to delete the circle after 3 seconds
-    mouseCircleTimer = hs.timer.doAfter(3, function()
+    -- Set a timer to delete the circle
+    mouseCircleTimer = hs.timer.doAfter(1, function()
       mouseCircle:delete()
       mouseCircle = nil
     end)

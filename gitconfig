@@ -1,6 +1,6 @@
 [user]
   name = alidaka
-  email = alidaka@gmail.com
+	email = augustus@shelfengine.com
 
 [diff]
   tool = vimdiff
@@ -29,3 +29,5 @@
 [core]
   editor = vim
   pager = less -F -X
+[include]
+	path = /Users/alidaka/.git-together

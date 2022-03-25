@@ -2,7 +2,7 @@
 
 source_dir=$( cd $(dirname $0) ; pwd -P )
 backup=~/dotfiles_backup
-files="bashrc vimrc gitconfig tmux.conf profile bash_profile zshrc"
+files="vimrc gitconfig tmux.conf zshrc hammerspoon/init.lua"
 
 if [ -d $backup ]; then
   echo "Dotfiles backup directory $backup already exists--aborting!"

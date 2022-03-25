@@ -1,10 +1,6 @@
 local mash = {"cmd", "alt", "ctrl"}
 local smash = {"cmd", "alt", "ctrl", "shift"}
 
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "W", function()
-  hs.alert.show("yoyoy world")
-end)
-
 --
 -- window management
 --

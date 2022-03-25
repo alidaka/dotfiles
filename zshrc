@@ -94,36 +94,24 @@ unsetopt auto_pushd
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-PATH=$PATH:~/scripts:~/android-studio/bin:~/bin/intellij/bin:~/code/direnv
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export PATH="$HOME/.npm-global/bin:$HOME/.cargo/bin:$PATH"
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-# added by travis gem
-[ -f /home/augustus/.travis/travis.sh ] && source /home/augustus/.travis/travis.sh
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
 alias ..='cd ..'
 alias trash='mv -t ~/trash'
 
-unalias gc
-function gc() {
-  local command="git clone git@github.com:alidaka/${1}"
-  if [[ "${1}" =~ '@' ]]
-  then
-    command="git clone ${1}"
-  fi
-
-  echo "${command}"
-  eval "${command}"
-}
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+export PIPENV_VENV_IN_PROJECT=1
 
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
-alias tmux='TERM=xterm-256color tmux'
+# kubectl
+alias k=kubectl
+source <(kubectl completion zsh)
+complete -F __start_kubectl k
 
 eval "$(direnv hook zsh)"
+
+if type git-together > /dev/null; then
+  alias git=git-together
+fi

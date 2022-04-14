@@ -80,6 +80,21 @@ hs.hotkey.bind(mash, "D", mouseHighlight)
 
 
 --
+-- test
+--
+hs.hotkey.bind(mash, 'f', function()
+      --execute front window's active tab javascript "window.alert('hello from Hammerspoon');"
+      -- function rocket(n) { if (n > 0) { document.getElementById('rockets').click(); setTimeout(() => rocket(n-1), 100); }}"
+  hs.osascript.applescript([[
+    tell application "Tandem"
+      execute front window's active tab javascript "document.getElementById('rockets').click();"
+    end tell
+  ]])
+end)
+
+
+
+--
 -- mash-R to reload Hammerspoon config
 --
 function reload_config(files)

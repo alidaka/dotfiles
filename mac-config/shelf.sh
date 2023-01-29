@@ -7,6 +7,7 @@ brew install ripgrep
 brew install jq
 brew install hammerspoon --cask
 brew install alfred --cask
+brew install signal --cask
 
 #"/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code" --install-extension vscodevim.vim
 

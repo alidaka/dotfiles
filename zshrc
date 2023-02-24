@@ -116,3 +116,5 @@ eval "$(direnv hook zsh)"
 if type git-together > /dev/null; then
   alias git=git-together
 fi
+
+export PATH="$PATH:/Users/alidaka/.dotnet/tools"

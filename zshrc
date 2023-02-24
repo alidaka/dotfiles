@@ -102,13 +102,14 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 export PIPENV_VENV_IN_PROJECT=1
 
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
+# Linux (x server) equivalents for MacOS convenience
+#alias pbcopy='xclip -selection clipboard'
+#alias pbpaste='xclip -selection clipboard -o'
 
 # kubectl
-alias k=kubectl
-source <(kubectl completion zsh)
-complete -F __start_kubectl k
+#alias k=kubectl
+#source <(kubectl completion zsh)
+#complete -F __start_kubectl k
 
 eval "$(direnv hook zsh)"
 

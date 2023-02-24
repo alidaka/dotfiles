@@ -32,11 +32,6 @@ unsetopt auto_pushd
 alias ..='cd ..'
 alias trash='mv -t ~/trash'
 
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
-export PIPENV_VENV_IN_PROJECT=1
-
 # Linux (x server) equivalents for MacOS convenience
 #alias pbcopy='xclip -selection clipboard'
 #alias pbpaste='xclip -selection clipboard -o'

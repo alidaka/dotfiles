@@ -80,6 +80,31 @@ hs.hotkey.bind(mash, "D", mouseHighlight)
 
 
 --
+-- mash-t to open a terminal
+--
+function terminal()
+  hs.osascript.applescript([[
+    tell application "System Events"
+     tell application process "Dock"
+        tell list 1
+           tell UI element "Terminal"
+              perform action "AXShowMenu"
+              tell menu "Terminal"
+                 tell menu item "New Window"
+                    perform action "AXPress"
+                 end tell
+              end tell
+           end tell
+        end tell
+     end tell
+  end tell
+  ]])
+end
+hs.hotkey.bind(mash, "t", terminal)
+
+
+
+--
 -- test
 --
 hs.hotkey.bind(mash, 'f', function()

@@ -1,6 +1,6 @@
 [user]
   name = alidaka
-	email = augustus@shelfengine.com
+	email = augustus.lidaka@calicoenergy.com
 
 [diff]
   tool = vimdiff
@@ -30,4 +30,4 @@
   editor = vim
   pager = less -F -X
 [include]
-	path = /Users/alidaka/.git-together
+	path = /Users/augustuslidaka/.git-together

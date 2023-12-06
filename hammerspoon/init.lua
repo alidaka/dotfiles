@@ -84,20 +84,10 @@ hs.hotkey.bind(mash, "D", mouseHighlight)
 --
 function terminal()
   hs.osascript.applescript([[
-    tell application "System Events"
-     tell application process "Dock"
-        tell list 1
-           tell UI element "Terminal"
-              perform action "AXShowMenu"
-              tell menu "Terminal"
-                 tell menu item "New Window"
-                    perform action "AXPress"
-                 end tell
-              end tell
-           end tell
-        end tell
-     end tell
-  end tell
+    tell application "Terminal"
+      do script ""
+      activate
+    end tell
   ]])
 end
 hs.hotkey.bind(mash, "t", terminal)
@@ -105,25 +95,14 @@ hs.hotkey.bind(mash, "t", terminal)
 --
 -- mash-c to open a Chrome window
 --
-function terminal()
+function chrome()
   hs.osascript.applescript([[
-    tell application "System Events"
-     tell application process "Dock"
-        tell list 1
-           tell UI element "Google Chrome"
-              perform action "AXShowMenu"
-              tell menu "Google Chrome"
-                 tell menu item "New Window"
-                    perform action "AXPress"
-                 end tell
-              end tell
-           end tell
-        end tell
-     end tell
-  end tell
+    tell application "Google Chrome"
+      make new window
+    end tell
   ]])
 end
-hs.hotkey.bind(mash, "c", terminal)
+hs.hotkey.bind(mash, "c", chrome)
 
 
 

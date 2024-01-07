@@ -5,6 +5,7 @@ brew install tmux
 brew install tree
 brew install ripgrep
 brew install jq
+brew install foreman
 brew install hammerspoon --cask
 brew install alfred --cask
 brew install signal --cask

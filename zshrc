@@ -30,7 +30,6 @@ unsetopt auto_pushd
 # User configuration
 ################
 alias ..='cd ..'
-alias trash='mv -t ~/trash'
 
 # Linux (x server) equivalents for MacOS convenience
 #alias pbcopy='xclip -selection clipboard'

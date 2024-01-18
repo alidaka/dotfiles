@@ -4,6 +4,8 @@ brew install node
 brew install dotnet-sdk
 brew install powershell
 
+brew install --cask cleanshot
+
 # for some reason this didn't work for me, had to install manually
 #brew install homebrew/cask/docker
 # enable Rosetta in Docker Desktop settings manually

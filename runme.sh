@@ -41,4 +41,11 @@ mkdir -p ~/temp
 mkdir -p ~/.vimswap
 echo
 
+echo "Setting up the special .envrc file (copying, not linking!)..."
+backup ~/.envrc
+cp envrc ~/.envrc
+echo "Done. If direnv is already installed, you should expect an error."
+echo "Friendly reminder to update the contents of your new ~/.envrc!"
+echo
+
 echo "All done!"

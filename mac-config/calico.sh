@@ -6,6 +6,9 @@ brew install powershell
 
 brew install --cask cleanshot
 
+# caps_lock -> escape mapping - needed for some Mac keyboard at some point?
+brew install karabiner-elements
+
 # for some reason this didn't work for me, had to install manually
 #brew install homebrew/cask/docker
 # enable Rosetta in Docker Desktop settings manually
@@ -15,6 +18,8 @@ brew install --cask cleanshot
 # So either install it manually (download and run an installer) or do this to install it unofficially
 brew tap isen-ng/dotnet-sdk-versions
 brew install dotnet-sdk6-0-400
+brew install duckdb
+brew install llm
 
 brew install visual-studio-code
 brew install azure-data-studio

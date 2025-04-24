@@ -29,10 +29,8 @@ for file in $files; do
   echo
 done
 
-echo " Creating trash directory..."
-mkdir -p ~/trash
-
-echo " Creating vim directories..."
+# Remaining one-offs
+echo "Creating vim directories..."
 mkdir -p ~/temp
 mkdir -p ~/.vimswap
 echo

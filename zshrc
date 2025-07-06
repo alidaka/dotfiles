@@ -50,6 +50,9 @@ alias k=kubectl
 #source <(kubectl completion zsh)
 #complete -F __start_kubectl k
 
+# `tree` that respects gitignore etc
+alias rgtree='rg --files | tree --fromfile'
+
 eval "$(direnv hook zsh)"
 
 if type git-together > /dev/null; then

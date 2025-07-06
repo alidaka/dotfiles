@@ -27,6 +27,7 @@ Plug 'elmcast/elm-vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'rust-lang/rust.vim'
+Plug 'elixir-editors/vim-elixir'
 call plug#end()
 
 "navigation stuff

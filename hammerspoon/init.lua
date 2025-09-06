@@ -84,10 +84,16 @@ hs.hotkey.bind(mash, "D", mouseHighlight)
 --
 function terminal()
   hs.osascript.applescript([[
-    tell application "Terminal"
-      do script ""
-      activate
-    end tell
+    if application "Terminal" is running then
+      tell application "Terminal"
+        do script ""
+        activate
+      end tell
+    else
+      tell application "Terminal"
+        activate
+      end tell
+    end if
   ]])
 end
 hs.hotkey.bind(mash, "t", terminal)

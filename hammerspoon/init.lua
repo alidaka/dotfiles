@@ -75,7 +75,7 @@ function mouseHighlight()
     mouseCircle = nil
   end)
 end
-hs.hotkey.bind(mash, "D", mouseHighlight)
+hs.hotkey.bind(mash, "d", mouseHighlight)
 
 
 
@@ -133,5 +133,5 @@ end)
 function reload_config(files)
   hs.reload()
 end
-hs.hotkey.bind(mash, "R", reload_config)
+hs.hotkey.bind(mash, "r", reload_config)
 hs.alert.show("Config loaded")

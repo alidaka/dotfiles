@@ -115,15 +115,14 @@ hs.hotkey.bind(mash, "c", chrome)
 --
 -- test
 --
-hs.hotkey.bind(mash, 'f', function()
-      --execute front window's active tab javascript "window.alert('hello from Hammerspoon');"
-      -- function rocket(n) { if (n > 0) { document.getElementById('rockets').click(); setTimeout(() => rocket(n-1), 100); }}"
+function tandem_rocket()
   hs.osascript.applescript([[
     tell application "Tandem"
       execute front window's active tab javascript "document.getElementById('rockets').click();"
     end tell
   ]])
-end)
+end
+--hs.hotkey.bind(mash, 'f', tandem_rocket)
 
 
 

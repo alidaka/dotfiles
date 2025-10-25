@@ -112,9 +112,37 @@ hs.hotkey.bind(mash, "c", chrome)
 
 
 
---
--- test
---
+-- Teams
+-- Manual workarounds: `smash` modifier-key-down state conflicts with something like `keystroke "m" using {shift down, command down}`, so let's try leaving
+-- Teams shortcuts default and using some slightly clunky Hammerspoon bindings
+-- As of initial authoring, these work, but for some reason they're flaky. See logging in video.
+-- Would be nice to make consistent if/when figuring out the issue.
+function teams_audio()
+  hs.osascript.applescript([[
+    tell application "Microsoft Teams"
+      activate
+      tell application "System Events"
+        keystroke "m" using {shift down, command down}
+      end tell
+    end tell
+  ]])
+end
+hs.hotkey.bind({"cmd", "shift"}, "2", teams_audio)
+
+function teams_video()
+  local l = hs.logger.new("my-logger", "debug")
+  l.d("hello")
+  hs.osascript.applescript([[
+    tell application "System Events"
+      tell application "Microsoft Teams" to activate
+      keystroke "o" using {shift down, command down}
+    end tell
+  ]])
+end
+hs.hotkey.bind({"cmd", "shift"}, "1", teams_video)
+
+
+
 function tandem_rocket()
   hs.osascript.applescript([[
     tell application "Tandem"

@@ -127,7 +127,7 @@ function teams_audio()
     end tell
   ]])
 end
-hs.hotkey.bind({"cmd", "shift"}, "2", teams_audio)
+--hs.hotkey.bind({"cmd", "shift"}, "2", teams_audio)
 
 function teams_video()
   local l = hs.logger.new("my-logger", "debug")
@@ -139,7 +139,7 @@ function teams_video()
     end tell
   ]])
 end
-hs.hotkey.bind({"cmd", "shift"}, "1", teams_video)
+--hs.hotkey.bind({"cmd", "shift"}, "1", teams_video)
 
 
 

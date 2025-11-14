@@ -59,4 +59,8 @@ if type git-together > /dev/null; then
   alias git=git-together
 fi
 
+if type vim > /dev/null; then
+  export EDITOR=vim
+fi
+
 export PATH="$PATH:/Users/alidaka/.dotnet/tools"

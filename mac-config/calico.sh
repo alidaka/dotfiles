@@ -3,6 +3,7 @@
 brew install node
 brew install dotnet-sdk
 brew install powershell
+brew install jj
 
 brew install --cask cleanshot
 

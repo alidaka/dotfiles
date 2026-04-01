@@ -63,4 +63,4 @@ if type vim > /dev/null; then
   export EDITOR=vim
 fi
 
-export PATH="$PATH:/Users/alidaka/.dotnet/tools"
+export PATH="$PATH:$HOME/.dotnet/tools"

@@ -8,6 +8,7 @@ brew install jj
 brew install --cask cleanshot
 
 # caps_lock -> escape mapping - needed for some Mac keyboard at some point?
+# TODO: add ~/.config/karabiner/karabiner.json to this repo, currently just copied
 brew install karabiner-elements
 
 # for some reason this didn't work for me, had to install manually

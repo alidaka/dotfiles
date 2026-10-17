@@ -55,6 +55,10 @@ alias rgtree='rg --files | tree --fromfile'
 
 eval "$(direnv hook zsh)"
 
+if type terraform > /dev/null; then
+  alias tf=terraform
+fi
+
 if type git-together > /dev/null; then
   alias git=git-together
 fi

@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 source_dir=$( cd $(dirname $0) ; pwd -P )
-files="vimrc gitconfig tmux.conf zshrc hammerspoon/init.lua"
+files="vimrc gitconfig tmux.conf zshrc hammerspoon/init.lua claude/statusline.sh"
 
 # Prep for backup (if needed)
 backup=~/dotfiles_backup
